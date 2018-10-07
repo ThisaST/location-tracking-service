@@ -1,5 +1,6 @@
 package com.se.project.smarttraveler.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -25,7 +26,7 @@ public class Driver implements Serializable{
 
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
-            mappedBy = "R")
+            mappedBy = "driver")
     private Set<Bus> bus = new HashSet<>();
 
     @NotNull

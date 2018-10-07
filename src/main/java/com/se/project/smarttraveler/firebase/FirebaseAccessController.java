@@ -22,7 +22,7 @@ public class FirebaseAccessController {
 
 
         try {
-            serviceAccount = new FileInputStream("/home/malware/Downloads/smarttraveler-6b8f0-firebase-adminsdk-srpu2-7f3282fd3f.json");
+            serviceAccount = new FileInputStream("/home/malware/Downloads/trackerapplication-1790f-firebase-adminsdk-i1x2e-bff47dc881.json");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -58,8 +58,10 @@ public class FirebaseAccessController {
 //        FirebaseDatabase database = Fi
         String token = generateAccessToken();
 
-            String uri = "https://smarttraveler-6b8f0.firebaseio.com/Users/UUoDWMbTL6UmbgEbjjE1iJzJXqw2.json?access_token=" + token;
-        /*RestTemplate restTemplate = new RestTemplate();
+        System.out.println(token);
+
+            /*String uri = "https://trackerapplication-1790f.firebaseio.com//Users/UUoDWMbTL6UmbgEbjjE1iJzJXqw2.json?access_token=" + token;
+        *//*RestTemplate restTemplate = new RestTemplate();
         Driver driver = restTemplate.getForObject(uri, Driver.class);
         String name = driver.getDriverName();
         System.out.println(name);
@@ -67,12 +69,12 @@ public class FirebaseAccessController {
         Map<Long, Driver> driverMap = new HashMap<>();
         driverMap.put(driver.getId(), driver);
 
-        System.out.println(token);*/
+        System.out.println(token);*//*
 
 
         Timer timer = new Timer();
         RequestScheduler requestScheduler = new RequestScheduler();
 
-        timer.scheduleAtFixedRate(requestScheduler, 0, 10000);
+        timer.scheduleAtFixedRate(requestScheduler, 0, 10000);*/
     }
 }
