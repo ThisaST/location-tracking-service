@@ -29,6 +29,11 @@ public class BusRoute implements Serializable {
             mappedBy = "busRoute")
     private Set<Bus> buses = new HashSet<>();
 
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "busRoute")
+    private Set<PinnedLocation> pinnedLocations = new HashSet<>();
+
     @NotNull
     private String routeNo;
 
@@ -93,11 +98,11 @@ public class BusRoute implements Serializable {
         this.updatedAt = updatedAt;
     }
 
-    /*public Set<Bus> getBuses() {
+    public Set<Bus> getBuses() {
         return buses;
     }
 
     public void setBuses(Set<Bus> buses) {
         this.buses = buses;
-    }*/
+    }
 }
